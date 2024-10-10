@@ -1,6 +1,43 @@
-<p>gallery works!</p>
+<h2>Gallery Title</h2>
 
-@for (photo of photos; track $index) {
-<img src="{{photo}}"
-     alt="">
-}
+<div class="container-fluid px-0">
+
+  <div class="row g-0">
+    @for (photo of photos; track $index) {
+    <div class="col col-6 col-md-3 ">
+      <app-photo-tile [photoData]="photo"></app-photo-tile>
+    </div>
+    }
+  </div>
+</div>
+
+<!-- image modal popup -->
+<div class="modal fade"
+     id="imageModal"
+     tabindex="-1"
+     aria-labelledby="imageModalabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+            id="imageModalLabel">Modal title</h5>
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text"
+               id="myInput"
+               class="form-control"
+               placeholder="Type here...">
+      </div>
+      <div class="modal-footer">
+        <button type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
