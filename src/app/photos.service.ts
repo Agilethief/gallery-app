@@ -210,8 +210,8 @@ export class PhotosService {
     return this.photos;
   }
 
-  getPhoto(index: number) {
-    return this.photos[index];
+  getPhotoByID(id: number) {
+    return this.photos[id];
   }
 
   constructor() {}

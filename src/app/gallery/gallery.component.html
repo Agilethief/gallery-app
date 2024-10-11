@@ -1,10 +1,11 @@
-<h2>Gallery Title</h2>
-
+<div class="container sticky-top">
+  <h2 class="text-center">Gallery Title</h2>
+</div>
 <div class="container-fluid px-0">
 
   <div class="row g-0">
     @for (photo of photos; track $index) {
-    <div class="col col-6 col-md-3 ">
+    <div class="col col-8 col-md-3 ">
       <app-photo-tile [photoData]="photo"
                       (photoClick)="showImageModal($event)"></app-photo-tile>
     </div>
