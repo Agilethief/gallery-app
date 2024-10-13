@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ photoData.title }}</h4>
+  <button type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body px-0">
+  <div class="d-flex justify-content-center">
+    <div class="position-relative">
+      <app-share-bar [photoData]="photoData"
+                     class="position-absolute top-0 end-0 p-3"></app-share-bar>
+
+      <img src="{{ photoData.src }}"
+           alt="{{ photoData.alt }}"
+           class="img-fluid rounded-sm mx-auto"
+           style="object-fit: cover;" />
+    </div>
+  </div>
+</div>

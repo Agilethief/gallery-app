@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { GalleryComponent } from './gallery/gallery.component';
 import { PhotoInspectComponent } from './photo-inspect/photo-inspect.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 export const routes: Routes = [
   {
@@ -12,6 +13,11 @@ export const routes: Routes = [
     path: 'gallery/:id',
     component: PhotoInspectComponent,
     title: 'Gallery',
+  },
+  {
+    path: 'privacy',
+    component: PrivacyComponent,
+    title: 'Privacy',
   },
   {
     path: 'photo/:id',

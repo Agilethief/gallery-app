@@ -3,6 +3,7 @@ import { PhotosService } from '../photos.service';
 import { PhotoTileComponent } from '../photo-tile/photo-tile.component';
 import { PhotoData } from '../photo.params.model';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ShareBarComponent } from '../share-bar/share-bar.component';
 
 // This component will provide a list of images that belong to the specified gallery
 
@@ -37,27 +38,8 @@ export class GalleryComponent {
 @Component({
   selector: 'ngbd-modal-content',
   standalone: true,
-  template: `
-    <div class="modal-header">
-      <h4 class="modal-title">{{ photoData.title }}</h4>
-      <button
-        type="button"
-        class="btn-close"
-        aria-label="Close"
-        (click)="activeModal.dismiss('Cross click')"
-      ></button>
-    </div>
-    <div class="modal-body px-0">
-      <div class="ratio ratio-1x1 rounded-sm">
-        <img
-          src="{{ photoData.src }}"
-          alt="{{ photoData.alt }}"
-          class="img-fluid rounded-sm"
-          style="object-fit: cover;"
-        />
-      </div>
-    </div>
-  `,
+  imports: [ShareBarComponent],
+  templateUrl: './gallery.modal.html',
 })
 export class NgbdModalContent {
   activeModal = inject(NgbActiveModal);

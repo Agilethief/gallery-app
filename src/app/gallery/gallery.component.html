@@ -5,7 +5,7 @@
 
   <div class="row g-0">
     @for (photo of photos; track $index) {
-    <div class="col col-8 col-md-3 ">
+    <div class="col col-8 col-md-2 ">
       <app-photo-tile [photoData]="photo"
                       (photoClick)="showImageModal($event)"></app-photo-tile>
     </div>
