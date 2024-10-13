@@ -1,27 +1,23 @@
 @if (photoData) {
 
 <div class="container-fluid">
-  <div class="mt-2 d-flex justify-content-center">
-    <img src="{{photoData.src}}"
-         alt="{{photoData.alt}}"
-         class="img-fluid w-75">
+  <div class="mt-2 d-flex justify-content-center ">
+
+    <div class="position-relative">
+      <app-share-bar [photoData]="photoData"
+                     class="position-absolute top-0 end-0 p-3"></app-share-bar>
+
+      <img src="{{photoData.src}}"
+           alt="{{photoData.alt}}"
+           class="img-fluid">
+    </div>
+
   </div>
   <div class="mt-4">
     <h2 class="fs-3 text-center">{{photoData.title}}</h2>
   </div>
   <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <p class="text-secondary fs-6 text-center">Location: {{photoData.location}}</p>
-      </div>
-      <div class="col">
-        <p class="text-secondary fs-6 text-center">Upload Date: {{photoData.uploadDate}}</p>
-      </div>
-      <div class="col">
-        <p class="text-secondary fs-6 text-center">Photo Date: {{photoData.photoDate}}</p>
-      </div>
-    </div>
-    <div class="row">
+    <div class="row mt-2">
       <div class="col"></div>
       <div class="col">
         <a class="btn btn-primary fs-4 w-5"
@@ -53,6 +49,18 @@
       </div>
       <div class="col"></div>
     </div>
+    <div class="row mt-2">
+      <div class="col">
+        <p class="text-secondary fs-6 text-center">Location: {{photoData.location}}</p>
+      </div>
+      <div class="col">
+        <p class="text-secondary fs-6 text-center">Upload Date: {{photoData.uploadDate}}</p>
+      </div>
+      <div class="col">
+        <p class="text-secondary fs-6 text-center">Photo Date: {{photoData.photoDate}}</p>
+      </div>
+    </div>
+
   </div>
 
 
